@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To DO List
+# Leaderboard
 
-> In this project, I will create a to do list application with javascript and webpack.
+> In this project, I will create a Leaderboard application with javascript and webpack.
 
 
 
@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://adamteddychang.github.io/To-Do-List/dist/index.html)
+[None available yet]()
 
 
 ## Getting Started
@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 Clone this Repository
 You can do so on the website Girhub.com, go to the green button that says "Code", click on it, and clone it.
-You can also type git clone https://github.com/adamteddychang/To-Do-List.git into your terminal.
+You can also type git clone https://github.com/adamteddychang/Leaderboard.git into your terminal.
 
 
 
