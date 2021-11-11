@@ -14,7 +14,7 @@
   </section>
   <section id="main">
     <div id="score">
-      <h2>Recent Score <button type="button">Refresh</button></h2>
+      <h2>Recent Score <button type="button" id="refresh_btn">Refresh</button></h2>
       <ul id="score_list">
         
 
@@ -22,10 +22,10 @@
     </div>
     <div id="add">
       <h2>Add Your Score</h2>
-      <form action="#">
-        <input type="text" placeholder="Your Name" id="yourname">
-        <input type="text" placeholder="Your Score" id="yourscore">
-        <input type="button" value="Submit" id="submit_btn">
+      <form id="form">
+        <input type="text" name="name" placeholder="Your Name" id="yourname">
+        <input type="text" name="score" placeholder="Your Score" id="yourscore">        
+        <button type="submit" id="submit_btn" >Submit</button>
       </form>
 
     </div>

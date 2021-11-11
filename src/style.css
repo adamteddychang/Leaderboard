@@ -45,6 +45,10 @@ h2 button {
   font-size: 20px;
 }
 
+.score:first-child {
+  border:none
+}
+
 .score:nth-child(even) {
   background-color: rgb(192, 187, 187);
 }

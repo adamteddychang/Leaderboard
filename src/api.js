@@ -1,31 +1,40 @@
+const scoreSrc = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/NNFdrdYO5isLUHbaJxs8/scores/'
+const scores = document.querySelector('#score_list');
+let scoresArr = [];
 
-const scoreSrc = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/YooLA4oSa1dXs7SRArpW/scores/'
-const nameInp = document.querySelector('#yourname');
-const scoreInp = document.querySelector("#yourscore");
-
-const getApi = async () => {
-  const getScores = await fetch(scoreSrc, {
-    method: 'GET',
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-  return getScores.json();
+const gameScores = async () => {
+  const response = await fetch(scoreSrc)
+    .then((resp) => resp.json())
+    .then((data) => data.result)
+    .catch(() => 'error');
+  return response;
 };
 
-const postApi = async () => {
-  const postScores = await fetch(scoreSrc,{
-    method:'POST',
-    body: JSON.stringify(
-      {
-      name: nameInp.value,
-      score: scoreInp.value,
-    }),
-    headers:{
-      'Content-type': 'application/json; charset=UTF-8',
-    },
+const displayScores = () => {
+  gameScores().then((resp) => {
+    if (typeof resp === 'object') {
+      scoresArr = Array.from(resp);
+      scores.innerHTML = '';
+      if (scoresArr.length > 0) {
+        scoresArr.forEach((e) => {
+          const scoresTemp = `<li class="score" >${e.user}: ${e.score}</li>`;
+          scores.innerHTML += scoresTemp;
+        });
+      }
+    }
   });
-  return postScores.json()
-}
+};
 
+const addScore = async (data) => {
+  await fetch(scoreSrc, {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-type': 'application/json',
+    },
+  }).then((response) => response.json());
+};
 
+exports.displayScores = displayScores;
+exports.gameScores = gameScores;
+exports.addScore = addScore;
