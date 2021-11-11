@@ -11,7 +11,7 @@ const gameScores = async () => {
 };
 
 const displayScores = async () => {
- await gameScores().then((resp) => {
+  await gameScores().then((resp) => {
     if (typeof resp === 'object') {
       scoresArr = Array.from(resp);
       scores.innerHTML = '';
