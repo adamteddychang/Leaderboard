@@ -10,8 +10,8 @@ const gameScores = async () => {
   return response;
 };
 
-const displayScores = () => {
-  gameScores().then((resp) => {
+const displayScores = async () => {
+ await gameScores().then((resp) => {
     if (typeof resp === 'object') {
       scoresArr = Array.from(resp);
       scores.innerHTML = '';
