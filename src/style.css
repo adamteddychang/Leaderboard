@@ -1,16 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 body {
+  position: relative;
   background-color: white;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+html::before {
+  content: ' ';
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.4;
+  background-image: url('https://images.all-free-download.com/images/graphicthumb/horses_racing_514731.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 #page_title {
+  width: 80%;
+  margin: 2rem auto 0;
+}
+
+#page_title h1 {
   font-size: 40px;
-  font-family: sans-serif;
-  text-align: center;
+  margin: 0 3rem;
 }
 
 #main {
   width: 80%;
-  margin: 5rem auto;
+  margin: 2rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -23,24 +44,25 @@ body {
 
 #score h2 {
   display: flex;
-  font-family: sans-serif;
   font-size: 32px;
 }
 
 h2 button {
   margin-left: 1rem;
-  box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.72);
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.72);
+  font-family: inherit;
+  border-radius: 70px;
 }
 
 #score_list {
   width: 80%;
-  border: 1px solid black;
+  border: 3px solid black;
   list-style: none;
   padding: 0;
 }
 
 .score {
-  border-top: 1px solid black;
+  border-top: 3px solid black;
   padding: 1rem 2rem;
   font-size: 20px;
 }
@@ -60,7 +82,7 @@ h2 button {
 
 #add h2 {
   font-size: 32px;
-  font-family: sans-serif;
+  padding: 0 1rem;
 }
 
 #add form {
@@ -68,16 +90,26 @@ h2 button {
   flex-direction: column;
   width: 50%;
   margin-top: 16px;
+  border: 2px solid black;
+  padding: 2rem 1rem;
 }
 
 #add form input {
   height: 2rem;
   margin-bottom: 2rem;
+  border-radius: 90px;
+  padding-left: 10px;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 #submit_btn {
   width: 30%;
   padding: 0.5em 1em;
   align-self: flex-end;
-  box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.72);
+  box-shadow: 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.72);
+  font-family: inherit;
+  border-radius: 70px;
 }
