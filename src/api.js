@@ -1,4 +1,4 @@
-const scoreSrc = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/NNFdrdYO5isLUHbaJxs8/scores/'
+const scoreSrc = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/NNFdrdYO5isLUHbaJxs8/scores/';
 const scores = document.querySelector('#score_list');
 let scoresArr = [];
 

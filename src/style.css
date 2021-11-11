@@ -46,7 +46,7 @@ h2 button {
 }
 
 .score:first-child {
-  border:none
+  border: none;
 }
 
 .score:nth-child(even) {
