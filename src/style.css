@@ -72,7 +72,7 @@ h2 button {
 }
 
 .score:nth-child(even) {
-  background-color: rgb(192, 187, 187);
+  background-color: rgba(165, 156, 156, 0.7);
 }
 
 #add {
