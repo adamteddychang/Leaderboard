@@ -52,6 +52,7 @@ h2 button {
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.72);
   font-family: inherit;
   border-radius: 70px;
+  cursor: pointer;
 }
 
 #score_list {
@@ -112,4 +113,5 @@ input:focus::placeholder {
   box-shadow: 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.72);
   font-family: inherit;
   border-radius: 70px;
+  cursor: pointer;
 }
