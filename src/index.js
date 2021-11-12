@@ -19,7 +19,10 @@ form.addEventListener('submit', (e) => {
     addScore(data);
     yourname.value = '';
     yourscore.value = '';
+   
   }
   e.preventDefault();
-  displayScores();
+  
 });
+
+displayScores();
